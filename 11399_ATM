@@ -1,0 +1,16 @@
+n = int(input())
+a = list(map(int, input().split()))
+sum = 0
+
+if n ==0:
+  print(a[0])
+else:
+  a.sort()
+
+  i_sum = 0
+  min_sum = 0
+
+  for i in range(n):
+    min_sum += (i_sum + a[i])
+    i_sum += a[i]
+  print(min_sum)
