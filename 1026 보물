@@ -1,0 +1,26 @@
+n = int(input())
+
+lst_a = []
+lst_b = []
+before_result=0
+result = 0
+
+# a, b에 숫자 받아옴
+lst_a = list(map(int, input().split()))
+lst_b = list(map(int,input().split()))
+
+
+# a의 작은수랑 b의 가장 큰 수랑 매칭(a.sorted, b.sorted(reverse=True))
+# lst_a = sorted(lst_a)
+# lst_b = sorted(lst_b, reverse=True)
+
+lst_a.sort()
+lst_b.sort(reverse=True)
+
+# a작은수와 b 큰수곱하기
+
+for a in range(n):
+  result += lst_a[a] * lst_b[a]
+
+
+print(result)
