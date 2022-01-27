@@ -1,0 +1,12 @@
+from math import gcd
+import math
+n = int(input())
+ring = list(map(int, input().split()))
+c = 0
+
+for s in range(1, len(ring)):
+    c += 1
+    gcd = math.gcd(ring[0], ring[s])
+    up = int(ring[0] / gcd)
+    down = int(ring[s] / gcd)
+    print(f'{up}/{down}')
