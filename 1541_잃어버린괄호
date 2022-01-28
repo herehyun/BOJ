@@ -1,0 +1,13 @@
+#55-50+45
+
+n = input().split('-') #55/50+45
+result = 0
+
+for i in n[0].split('+'): #첫번째 칸을+기준으로 나눔
+  result += int(i)
+
+for i in n[1:]:
+  for j in i.split('+'): #두번째 칸을 + 기준으로 나눔
+    result -= int(j) # 나눈것을 -
+
+print(result)
