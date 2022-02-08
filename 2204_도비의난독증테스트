@@ -1,0 +1,12 @@
+while True:
+  n = int(input())
+  if n == 0: 
+    break
+
+  alp= []
+  for _ in range(n):
+      alp.append(input())
+
+  alp = sorted(alp, key =str.lower)
+  print(alp[0])
+# 
