@@ -1,0 +1,9 @@
+a, b, notebook = map(int, input().split())
+
+earn_money = notebook - b
+
+if earn_money <= 0:
+  print('-1')
+else:
+  break_even_point = a // earn_money
+  print(break_even_point+1)
