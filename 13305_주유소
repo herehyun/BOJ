@@ -1,0 +1,12 @@
+n = int(input())
+distances = list(map(int, input().split()))
+prices = list(map(int, input().split()))
+
+sum = 0
+start = prices[0]
+
+for i in range(n):
+  if prices[i] < start:
+    start = prices[i]
+  sum += start * distances[i]
+print(sum)
