@@ -1,0 +1,19 @@
+# idea
+# 모든 자릿수의 숫자를 더한게 3의 배수면 성립
+# 단, 30의 배수니까 0이 들어가있어야한다.
+
+n = str(input())
+a = sorted(n, reverse=True)
+a = "".join(a)
+sum = 0
+if '0' in n:
+  for i in range(len(n)):
+    sum += int(n[i])
+  if sum % 3 ==0:
+    print(a)
+
+  else:
+    print(-1)
+
+else:
+  print(-1)
