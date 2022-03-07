@@ -1,0 +1,21 @@
+# 도저히 생각이안남
+# 틀린 요소 : 홀수가 생기면 무조건 나눌수없는데 1만 생각하고, 그 1을 지운다고만 생각해서 생긴 실패이유이다
+start, end = map(int, input().split())
+cnt =1
+
+while True:
+  if start == end:
+      break
+  elif start > end:
+      count = -1
+      break
+  elif (end % 10) == 1:
+      end = end // 10
+      cnt += 1
+  elif (end % 2) ==0:
+      end = end// 2
+      cnt +=1 
+  else:
+      cnt = -1
+      break
+print(cnt)
